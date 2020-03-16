@@ -29,3 +29,11 @@ $understrap_includes = array(
 foreach ( $understrap_includes as $file ) {
 	require_once get_template_directory() . '/inc' . $file;
 }
+
+// To do
+// Need to move this custom function to plugins!
+function inv_art_heroimage_display() {
+	echo '<p> Hello World </p>';
+}
+
+add_action( 'inv_art_heroimage', 'inv_art_heroimage_display');
