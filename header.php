@@ -68,6 +68,13 @@ $container = get_theme_mod( 'understrap_container_type' );
                 </div>
             </div>
         </nav>
-    
-        <?php do_action( 'inv_art_heroimage'); ?>
+        
+        <?php 
+            if(is_front_page()): 
+                do_action( 'inv_art_heroimage'); 
+            endif;
+            if(is_page('about-us')):
+                do_action('about_us_banner');
+            endif; 
+        ?>
 	</div><!-- #wrapper-navbar end -->
