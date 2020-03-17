@@ -49,7 +49,9 @@ do_action( 'woocommerce_before_main_content' );
 
 
 if ( woocommerce_product_loop() ) {
-
+	?>
+	<div class="products-grid col-xl-9 col-lg-8 order-lg-2">
+	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop.
 	 *
@@ -57,9 +59,14 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_result_count - 20
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
+
+	
+	
 	if(!is_front_page() ):
 		do_action( 'woocommerce_before_shop_loop' );
-	endif;
+	endif; ?>
+	</div>
+	<?php 
 	woocommerce_product_loop_start();
 
 		if ( wc_get_loop_prop( 'total' ) ) {

@@ -70,4 +70,3 @@ function about_us_banner_display() {
 }
 
 add_action('about_us_banner','about_us_banner_display');
-
