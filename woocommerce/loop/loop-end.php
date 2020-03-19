@@ -28,6 +28,6 @@ endif;
 	</div>
 	<!-- product filter -->
 	<div class="col-xl-3 col-lg-4 order-lg-1 <?php echo $hidden; ?>">
-		<p> <?php dynamic_sidebar( 'product-filter-sidebar' ); ?> </p>
+		<?php dynamic_sidebar( 'product-filter-sidebar' ); ?>
 	</div>
 </div>
