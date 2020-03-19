@@ -18,5 +18,16 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+// hide homepage
+$hidden='';
+if(is_front_page()): 
+	$hidden = 'd-none';
+endif;
 ?>
+		</div>
+	</div>
+	<!-- product filter -->
+	<div class="col-xl-3 col-lg-4 order-lg-1 <?php echo $hidden; ?>">
+		<p> <?php dynamic_sidebar( 'product-filter-sidebar' ); ?> </p>
+	</div>
 </div>

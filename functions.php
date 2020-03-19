@@ -68,5 +68,20 @@ function about_us_banner_display() {
 	  </div>
 	';
 }
-
 add_action('about_us_banner','about_us_banner_display');
+
+// add sidebar for filter
+function product_filter_sidebar(){
+	$args = array (
+	'name'          => 'Product Filter Sidebar',
+    'id'            => 'product-filter-sidebar',
+    'description'   => 'This is Sidebar for product filter.',
+    'class'         => 'nav nav-pills flex-column mt-4 mt-lg-0',
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</li>',
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => '</h2>'
+	);
+	register_sidebar( $args );
+}
+add_action('widgets_init','product_filter_sidebar');

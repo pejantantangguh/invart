@@ -18,7 +18,18 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+// to check if it's home page
+$bootstrapClass='';
+if(is_front_page()): 
+	$bootstrapClass = 'col-xl-12 col-lg-12';
+else:
+	$bootstrapClass = 'products-grid col-xl-9 col-lg-8 order-lg-2';
+endif;
 ?>
+
 <!-- Customizing loop start to use bootstrap -->
 
 <div class="row">
+	<!-- Product grid -->
+	<div class="<?php echo $bootstrapClass; ?>">
+		<div class="row">
